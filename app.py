@@ -38,6 +38,7 @@ def transform_text(text):
 tfidf = pickle.load(open('vectorizer.pkl','rb'))
 model = pickle.load(open('model.pkl','rb'))
 
+
 # Function to display navigation menu
 def streamlit_menu():
     example = 3  # Example number for horizontal menu
@@ -65,6 +66,7 @@ def streamlit_menu():
 # Display navigation menu
 selected_tab = streamlit_menu()
 
+
 # Main content based on selected tab
 if selected_tab == "Home":
     st.markdown("<h1 style='font-size: 27px;'>SpamSleuth  - Your Ultimate Email and SMS Guardian</h1>", unsafe_allow_html=True)
@@ -88,11 +90,11 @@ elif selected_tab == "About":
     st.title("About")
     st.write("This is an email/sms spam classifier application.")
     st.write("It predicts whether a given message is spam or not spam.")
+    st.write("Simply enter your spam messages/SMS content and click on predict to know your result!")
     st.write("The classification is based on a machine learning model trained on text data.")
-    st.write("Feel free to use the application to classify your messages!")
+    st.write("Feel free to use the application to classify your messages ")
 elif selected_tab == "Regulations":
     st.title("Regulations")
     st.write("Here are some regulations to follow while using this application:")
-    st.write("1. Do not input any sensitive or personal information into the message input field.")
-    st.write("2. Use the application responsibly and do not abuse it for malicious purposes.")
-    st.write("3. If you encounter any issues or have feedback, please reach out to the developer.")
+    st.write("1. Use the application responsibly and do not abuse it for malicious purposes.")
+    st.write("2. If you encounter any issues or have feedback, please reach out to the developer team.")
